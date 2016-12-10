@@ -57,6 +57,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -174,6 +176,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.1.0)
+  font-awesome-sass
   jquery-rails
   listen
   pg
