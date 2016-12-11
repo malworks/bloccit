@@ -13,6 +13,7 @@ end
 group :development do
   gem 'sqlite3'
   gem 'listen'
+  gem 'pry-rails' # works as an alternative to rails console. formatted nicer
 end
 
 group :development, :test do
