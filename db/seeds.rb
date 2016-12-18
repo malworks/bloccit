@@ -24,3 +24,12 @@ puts "#{Comment.count} comments created"
 puts "#{Post.count}"
 Post.find_or_create_by(title: "This is a unique post.", body: "This is the body of the unique post.")
 puts "#{Post.count}"
+
+10.times do
+  Advertisement.create!(
+    title: RandomData.random_sentence,
+    copy: RandomData.random_paragraph
+  )
+end
+
+advertisements = Advertisement.all
