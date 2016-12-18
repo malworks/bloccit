@@ -15,8 +15,9 @@ class AdvertisementsController < ApplicationController
   	@advertisement = Advertisement.new
     @advertisement.title = params[:advertisement][:title]
     @advertisement.copy = params[:advertisement][:copy]
+    @advertisement.price = params[:advertisement][:price]
 
-    if @post.save
+    if @advertisement.save
       flash[:notice] = "Ad was saved."
       redirect_to @advertisement
     else
