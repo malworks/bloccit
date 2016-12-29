@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  let(:post) {Post.create!(title: "New Post Title", body: "New Post Body")}
-  let(:comment) { Comment.create!(body: "Comment Body", post: post)}
+  let(:topic) { Topic.reate!(name: RandomData.random_sentence, description: RandomData.random_paragaph) }
+  let(:post) { topic.posts.create!(title: random_sentence, body: random_paragaph) }
 
   describe "attributes" do
     it "has a body attribute" do
