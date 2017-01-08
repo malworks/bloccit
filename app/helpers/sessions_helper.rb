@@ -1,6 +1,6 @@
 module SessionsHelper
 	def create_session(user)
-		session[:user_id] = user.user_id
+		session[:user_id] = user.id
 	end
 
 	def destroy_session(user)
