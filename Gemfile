@@ -13,7 +13,7 @@ end
 group :development do
   gem 'sqlite3'
   gem 'listen'
-  gem 'pry-rails' # works as an alternative to rails console. formatted nicer
+  
   gem 'shoulda'
 end
 
@@ -21,6 +21,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'rails-controller-testing'
   gem 'shoulda'
+  gem 'pry-rails' # works as an alternative to rails console. formatted nicer
 end
 
 # Use SCSS for stylesheets

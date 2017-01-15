@@ -3,6 +3,7 @@ class User < ApplicationRecord
 	# callback
 	before_save { self.email = email.downcase if email.present? }
 	before_save :format_name
+  before_save { self.role ||= :member }
 
 	# validates presence and min/max length for name and email
 	validates :name, length: { minimum: 1, maximum: 100 }, presence: true
@@ -21,14 +22,21 @@ class User < ApplicationRecord
     # requires BCrypt to use. Used for hashing passwords
    	has_secure_password
 
-   	def format_name
-   		if name
-   			name_array = []
-   			name.split.each do |name_part|
-   				name_array << name_part.capitalize
-   			end
-   				
-   			self.name = name_array.join(" ")
-   		end
-   	end
+    enum role: [:member, :admin]
+
+
+  def format_name
+      if name
+        name_array = []
+        name.split.each do |name_part|
+          name_array << name_part.capitalize
+        end
+          
+        name = name_array.join(" ")
+      end
+    end
+
+    
 end
+
+
