@@ -3,7 +3,8 @@ module PostsHelper
 		current_user && (current_user == post.user || current_user.admin? || current_user.moderator?)
 	end
 
-	def user_is_authorized_for_delete?
-		current_user && (current_user == post.user || current_user.admin?)
-	end
+## commenting out til I can figure out the error	
+#	def user_is_authorized_for_delete?
+#		current_user && (current_user == post.user || current_user.admin?)
+#	end
 end
