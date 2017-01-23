@@ -37,3 +37,5 @@ gem 'turbolinks'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass'
 gem 'bcrypt'
+# stores sensitive info that does not belong on github (like API keys and username/passwords)
+gem 'figaro', '1.0'
