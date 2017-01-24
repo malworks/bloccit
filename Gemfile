@@ -13,8 +13,6 @@ end
 group :development do
   gem 'sqlite3'
   gem 'listen'
-  
-  gem 'shoulda'
 end
 
 group :development, :test do
@@ -22,6 +20,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'shoulda'
   gem 'pry-rails' # works as an alternative to rails console. formatted nicer
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 # Use SCSS for stylesheets
